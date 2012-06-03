@@ -14,7 +14,7 @@
                     .span4
                         #sidebar
                             = image_tag 'eric_stratmann.jpg', :alt => 'Picture of Eric Stratmann'
-                            %ul#links
+                            %ul.links
                                 %li= link_to "About", page_path("index")
                                 %li= link_to "Contact", page_path("contact")
                                 %li= link_to "Github", "https://github.com/ericstratmann"
@@ -23,6 +23,8 @@
                                 %li= link_to "Resume", page_path("resume")
                                 %li= link_to "Skills", page_path("skills")
                                 %li= link_to "Website Source", "https://github.com/ericstratmann/personal-website" 
+                                %span Personal
+                                %li= link_to "Books", page_path("books")
                     .span8
                         #content
                             = yield

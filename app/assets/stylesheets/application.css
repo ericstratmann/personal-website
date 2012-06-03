@@ -34,7 +34,6 @@ h2 {
 
 #sidebar {
     margin: 1cm;
-    height: 500px;
     background-color:rgba(255,255,255,0.2)
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -67,16 +66,19 @@ h2 {
     background-color:rgba(255,255,255,0.4)
 }
 
-#links {
-    opacity: 1;
+.links {
     margin-top: 1cm;
-    list-style-type: none;
+    padding-bottom: 1cm;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-#links li {
+li {
+    list-style-type: none;
+}
+
+.links li {
     padding: 0.3em;
     margin:0.2em;
     margin-left:1.5cm;
