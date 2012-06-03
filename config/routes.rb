@@ -57,4 +57,6 @@ PersonalWebsite::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   match "/pages/*id" => 'pages#show', :as => :page, :format => false
+
+  match "/404", :to => "errors#not_found"
 end
