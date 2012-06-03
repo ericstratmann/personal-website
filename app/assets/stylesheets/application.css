@@ -9,41 +9,84 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
 
+
 body {
-    background: #EEEEEE;
+    background-image: url("/assets/stripes.png")
+}
+
+h1 { 
+    text-align: center;
+}
+
+h2 {
+    border-bottom: solid;
+    border-bottom-width: 1px;
+}
+
+#top {
+    box-shadow: 0.2em 0.2em 0.5em #666;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    background-color:rgba(255,255,255,0.2)
 }
 
 #sidebar {
-    height: 700px;
-    background: #DDD;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+    margin: 1cm;
+    height: 500px;
+    background-color:rgba(255,255,255,0.2)
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 1em 1em 0.5em #666;
 }
 
 #sidebar img {
     padding-top: 1cm;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content {
-    margin-top: 0.5in;
-    margin-left:1.5in;
-    margin-right:1.5in;
+    margin-top: 0.4in;
+    margin-left:0.0in;
+    margin-right:0.5in;
     padding: 1cm;
-    border:solid;
     border-width:1px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    box-shadow: 1em 1em 0.5em #666;
+    opacity: 0.7;
+    background-color:rgba(255,255,255,0.2)
+}
+
+#sidebar:hover, #content:hover {
+    background-color:rgba(255,255,255,0.4)
 }
 
 #links {
+    opacity: 1;
+    margin-top: 1cm;
     list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 #links li {
     padding: 0.3em;
+    margin:0.2em;
+    margin-left:1.5cm;
+    margin-right:1.5cm;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #DDD;
+}
+
+#links li:hover {
+    background: #BBB;
 }
