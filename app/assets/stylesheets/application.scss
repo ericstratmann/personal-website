@@ -11,9 +11,15 @@
  *= require_self
 */
 
+@mixin rounded($radius: 10px) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
 
 body {
-    background-image: url("/assets/stripes.png")
+    background-image: url("/assets/stripes.png");
 }
 
 h1 { 
@@ -23,44 +29,38 @@ h1 {
 h2 {
     border-bottom: solid;
     border-bottom-width: 1px;
+    border-color: #AAA;
 }
 
 #top {
-    box-shadow: 0.2em 0.2em 0.5em #666;
     margin: 0% 5% 0% 5%;
-    background-color:rgba(255,255,255,0)
 }
 
 #sidebar {
     margin: 10%;
     padding: 5%;
-    background-color:rgba(255,255,255,0)
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    box-shadow: 1em 1em 0.5em #666;
+    @include rounded;
+    box-shadow: 0.2em 0.2em 0.2em #666;
 }
 
 #sidebar img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.8;
 }
 
 #content {
+    @include rounded;
     margin: 4% 1%;
     padding: 5%;
     border-width:1px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    box-shadow: 1em 1em 0.5em #666;
+    box-shadow: 0.2em 0.2em 0.2em #666;
     opacity: 0.9;
-    background-color:rgba(255,255,255,0)
 }
 
 #sidebar:hover, #content:hover {
-    background-color:rgba(255,255,255,0.4)
+    background-color:rgba(255,255,255,0.4);
 }
 
 .links {
@@ -77,12 +77,9 @@ li {
 .links li {
     padding: 3%;
     margin: 3% 25% 3% 25%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    @include rounded(5px);
     background: #DDD;
-}
-
-#links li:hover {
-    background: #BBB;
+    &:hover {
+        background: #BBB;
+    }
 }
