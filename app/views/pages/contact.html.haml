@@ -1,0 +1,12 @@
+%h2 Contact
+/ Is this overkill? Probably
+%p
+    e-mail:
+    = render :partial => "obscure", :locals => {:text => "ericstratmann@gmail.com", :default => "[firstname].[lastname]@gmail.com"}
+%p
+    e-mail:
+    = render :partial => "obscure", :locals => {:text => "estrat@cs.stanford.edu", :default => "estrat@cs.[myuniversity].edu"}
+%p
+    phone:
+    = render :partial => "obscure", :locals => {:text => "(203) 645-9982", :default => nil}
+    (but please use e-mail instead unless you have a good reason!)

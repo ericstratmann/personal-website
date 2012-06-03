@@ -1,3 +1,0 @@
-<% index = text.length / 2 %>
-<% def plus1 str ; str.split('').map{|l| (l.ord + 1).chr}.join ; end %>
-<span class="obscure" style="display:none"><%= plus1 text[0...index] %></span><span class="hidden"><%= default || "You need Javascript enabled to view this (sorry noscript users!)" %></span><span class="obscure" style="display:none"><%= plus1 text[index..-1] %></span>
