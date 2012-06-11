@@ -7,21 +7,14 @@
         = javascript_include_tag 'application'
         = csrf_meta_tags
     %body
-        .row
-            .span12
-                %h1#top Eric Stratmann
-                .row
-                    .span4
-                        #sidebar
-                            = image_tag 'eric_stratmann.jpg', :alt => 'Picture of Eric Stratmann'
-                            %ul.links
-                                %li= link_to "About", page_path("index")
-                                %li= link_to "Contact", page_path("contact")
-                                %li= link_to "Github", "https://github.com/ericstratmann"
-                                %li= link_to "Research", page_path("research")
-                                %li= link_to "Resume", page_path("resume")
-                                %span Personal
-                                %li= link_to "Books", page_path("books")
-                    .span8
-                        #content
-                            = yield
+        .main
+            .navigation
+                %ul.nav-tabs
+                    %li= link_to "About", page_path("index")
+                    %li= link_to "Contact", page_path("contact")
+                    %li= link_to "Github", "https://github.com/ericstratmann"
+                    %li= link_to "Research", page_path("research")
+                    %li= link_to "Resume", page_path("resume")
+                    %li= link_to "Books", page_path("books")
+            #content
+                = yield
