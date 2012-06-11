@@ -7,13 +7,4 @@
         = csrf_meta_tags
     %body
         .main
-            .navigation
-                %ul.nav-tabs
-                    %li= link_to "About", page_path("index")
-                    %li= link_to "Contact", page_path("contact")
-                    %li= link_to "Github", "https://github.com/ericstratmann"
-                    %li= link_to "Research", page_path("research")
-                    %li= link_to "Resume", page_path("resume")
-                    %li= link_to "Books", page_path("books")
-            #content
-                = yield
+            = yield
